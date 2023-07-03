@@ -132,6 +132,8 @@ typedef enum LodePNGColorType {
   LCT_MAX_OCTET_VALUE = 255
 } LodePNGColorType;
 
+void lodepng_free(void* ptr);
+
 #ifdef LODEPNG_COMPILE_DECODER
 /*
 Converts PNG data in memory to raw pixel data.
