@@ -91,9 +91,7 @@ static void lodepng_free(void* ptr) {
 }
 #else /*LODEPNG_COMPILE_ALLOCATORS*/
 /* TODO: support giving additional void* payload to the custom allocators */
-void* lodepng_malloc(size_t size);
-void* lodepng_realloc(void* ptr, size_t new_size);
-void lodepng_free(void* ptr);
+
 #endif /*LODEPNG_COMPILE_ALLOCATORS*/
 
 /* convince the compiler to inline a function, for use when this measurably improves performance */
