@@ -30,6 +30,10 @@ Rename this file to lodepng.cpp to use it for C++, or to lodepng.c to use it for
 
 #include "lodepng.h"
 
+void* (*lodepng_malloc)(size_t size);
+void* (*lodepng_realloc)(void* ptr, size_t new_size);
+void (*lodepng_free)(void* ptr);
+
 #ifdef LODEPNG_COMPILE_DISK
 #include <limits.h> /* LONG_MAX */
 #include <stdio.h> /* file handling */
