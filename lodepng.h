@@ -132,9 +132,7 @@ typedef enum LodePNGColorType {
   LCT_MAX_OCTET_VALUE = 255
 } LodePNGColorType;
 
-extern void* (*lodepng_malloc)(size_t size);
-extern void* (*lodepng_realloc)(void* ptr, size_t new_size);
-extern void (*lodepng_free)(void* ptr);
+void lodepng_set_global_allocators(void*(*lodepng_malloc)(size_t size), void*(*lodepng_realloc)(void* ptr, size_t new_size), void (*lodepng_free)(void* ptr));
 
 #ifdef LODEPNG_COMPILE_DECODER
 /*
